@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*! z-index: 0; */
+}
+
+body{
+    font-size: 13px;
+    font-family: manrope;
+    color: hsl(214, 17%, 51%);
+    background-color: hsl(210, 46%, 95%);
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    background-color: white;
+    border-radius: 10px;
+    width: 90%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.drawer img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    height: 100%;
+}
+
+.text{
+    padding: 30px 25px 0 25px;
+    margin-bottom: 25px;
+}
+
+.head{
+    color: hsl(217, 19%, 35%);
+    margin-bottom: 10px;
+}
+
+.info{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+}
+
+.info-p{
+    font-size: 14.8px;
+}
+
+.info-closed{
+    display: none;
+}
+.contain{
+    display: flex;
+    align-items: center;
+    flex-basis: 80%;
+}
+.img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 6%;
+}
+
+.img img{
+    width: 100%;
+}
+
+.share-button{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.share-button img{
+    width: 50%;
+}
+
+.info span{
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+}
+
+.info-tooltip{
+    display: none;
+}
+
+.info-tooltip-active{
+    background-color: hsl(217, 19%, 35%);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 25px;
+    border-radius: 0 0 10px 10px;
+    opacity: 1;
+}
+
+.share{
+    color: hsl(212, 23%, 69%);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: large;
+}
+
+.contain2{
+    gap: 20px;
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+    position: absolute;
+    bottom: 10px;
+}
+
+.attribution a {
+    color:  hsl(217, 19%, 35%); 
+}
+
+.desktop-tooltip{
+    visibility: hidden;
+    display: none;
+    padding: 0 15px;
+}
+
+@media (min-width: 700px) {
+    .main{
+        width: 60%;
+        flex-flow: row nowrap;
+    }
+    
+    .drawer{
+        flex-shrink: 0;
+        flex-basis: 40%;
+    }
+    .drawer img{
+        border-radius: 10px 0px 0 10px;
+    }
+    .info{
+        position: relative;
+    }
+
+    .text{
+        margin-bottom: 0;
+    }
+
+    .desktop-tooltip-active{
+        visibility: visible;
+        display: flex;
+        flex-flow: row nowrap;
+        background-color: hsl(217, 19%, 35%);
+        width: 200px;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        position: absolute;
+        top: -65%;
+        right: 0%;
+        transform: translateX(27%);
+    }
+
+    .desktop-tooltip-active::after{
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 10px;
+        border-style: solid;
+        border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+    }
+
+    .share{
+        font-size: 15px;
+        
+    }
+
+    .desktop-tooltip div{
+        flex-basis: 25%;
+        padding-top: 1px;
+        text-align: center;
+    }
+}
